@@ -8,7 +8,6 @@ import sys
 # create a socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# connect to server
 host = sys.argv[1] # server address
 port = int(sys.argv[2]) # server port
 s.connect((host, port))
@@ -24,7 +23,7 @@ while(1):
         print data
     if not data: # if end of data, leave loop
         break
-    print ’received’, len(data), ’bytes’
+    print 'received', len(data), 'bytes'
 
 # close the connection
 s.close()
